@@ -2,6 +2,7 @@
 
 이 저장소는 글 원본과 첨부를 보관한다. 앱은 고정한 콘텐츠 커밋을 `content/` submodule로 읽는다.
 2026-10-23에 아래 파일 배치와 SHA-256 예시를 정식 이관 파일과 대조했다.
+현재 앱의 변경 범위는 submodule 연결과 기존 글 조회다. 새 편집·가져오기·게시 기능은 포함하지 않는다.
 
 ## 원본 배치
 
@@ -31,52 +32,38 @@ posts/
 파일명 정규화와 필드 계약은 [CONTENT_SCHEMA.md](CONTENT_SCHEMA.md)에 있다.
 기존 `#/post/<글 ID>` 주소와 블록 fragment를 유지한다.
 
-## 작성 절차
+## 원본 조회와 검증
 
-1. 기존 글은 정식 Markdown과 필요한 형제 첨부를 함께 읽는다. `id`와 입력 파일의 SHA-256을 확인한다.
-2. 새 글은 정식 UUID를 한 번 만든다. 반복 저장과 내보내기에서도 같은 ID를 사용한다.
-3. 제목과 메타데이터는 본문과 구분해 수정한다. 본문을 수정하지 않았다면 첫 H1과 본문 바이트를 보존한다.
-4. 첨부는 Markdown 옆에 두고 `./파일명`으로 참조한다. 새 글 링크는 `#/post/<글 ID>`를 사용한다.
-5. 기존 ID를 갱신하면 기준 revision을 확인한다. 누락 첨부와 충돌이 있으면 저장을 중단한다.
-6. 앱 체크아웃에서 `node scripts/content.mjs --check`로 원본을 검사한다. `node scripts/prepare-site.mjs`로 공개 출력을 만든다.
-7. 변경 diff에서 본문·메타데이터·첨부를 검토한다. 콘텐츠 커밋을 먼저 원격에 보관한 뒤 앱 gitlink를 갱신한다.
+정식 Markdown의 frontmatter와 본문을 구분해 읽는다. 이미지가 근거라면 같은 폴더의 실제 파일도 확인한다.
+원본 Markdown·첨부·ID·확장 메타데이터를 임의로 바꾸지 않는다.
+현재 앱은 원본을 읽고 관계·첨부를 검증한 뒤 공개 출력을 생성한다.
 
-웹 편집은 브라우저 초안과 파일 내보내기를 사용한다. 웹에서 Git 저장소로 직접 발행하지 않는다.
-정식 문서 전체를 읽은 편집과 공개 화면에서 시작한 수정본은 서로 다른 계약을 사용한다.
-기존 ID에는 전체 편집본도 기준 revision이 필요하다. 새 ID의 첫 저장에는 기준 revision을 요구하지 않는다.
-공통 파서와 파일명 규칙은 앱의 `src/shared/document.mjs`에 있다. 원본 읽기·검증·저장은 `scripts/content.mjs`에 있다.
-이관 함수는 `scripts/migrate-content.mjs`의 `migrateLegacyContent`다. 편집기는 `src/features/post-editor/useDraftEditor.ts`에서 문서 모드와 기준 revision을 보관한다.
-저장 반환값에 `cleanupWarnings`가 있으면 CLI는 경고를 표시한다. 이 경고 때문에 저장을 재시도하지 않는다.
-이 경고는 저장 뒤 정리가 남았다는 뜻이며, 메타데이터와 공개 DTO에 넣지 않는다.
-
-## 로컬 가져오기
-
-다음 명령은 앱 체크아웃에서 실행한다. `/path/to/content`는 사용할 콘텐츠 체크아웃으로 바꾼다.
-`--dry-run`은 문서·revision·첨부·참조를 검사하며 원본을 쓰지 않는다.
+앱 체크아웃에서 다음 명령을 실행한다.
 
 ```sh
-npm run import:md -- "./export/article.md" --content-root /path/to/content --dry-run
+npm run check:content
+npm run build
 ```
 
-검사 결과와 diff를 검토한 뒤 같은 명령에서 `--dry-run`을 빼고 저장한다.
-기준 revision이 없는 기존 ID의 전체 편집본에는 `--expected-revision`을 넣는다.
-다음 해시는 문서 예시의 `z-index 적용한됨` 원문 revision이다. 실제 작업에서는 편집을 시작한 원문의 해시를 사용한다.
+기본 콘텐츠 root는 앱의 `content/`다. 앱 밖 staging은 로컬 검증에만 `CONTENT_ROOT`로 지정할 수 있다.
+공통 파서와 파일명 규칙은 앱의 `src/shared/document.mjs`에 있다. 원본 읽기·검증은 `scripts/content.mjs`에 있다.
+이관 함수는 `scripts/migrate-content.mjs`의 `migrateLegacyContent`다.
+콘텐츠 커밋을 원격에 보관한 뒤 앱 gitlink를 갱신한다. 빌드는 기록한 커밋을 사용하며 원격 최신 브랜치를 추적하지 않는다.
 
-```sh
-npm run import:md -- "./export/z-index 적용한됨.md" --content-root /path/to/content --expected-revision fa5e55da565197ce394c41240594bcacce545bbbdf6de484fa494214dd7cddd7 --dry-run
-```
+## 작성·게시 기능의 현재 경계
 
-수정본의 `base_revision`은 CLI가 읽는다. 옵션과 파일의 기준 값이 다르면 저장을 중단한다.
-콘텐츠 root는 `--content-root`, `CONTENT_ROOT`, 앱의 `content/` 순서로 선택한다.
-입력 Markdown은 하나만 지정한다. `./파일명` 첨부는 입력 옆에서 읽으며, 같은 글의 기존 첨부도 재사용한다.
-누락 첨부와 다른 바이트의 파일명 충돌은 저장 전에 거부한다. 성공 결과는 ID·상대 파일명·revision을 담은 JSON이다.
+기존 브라우저의 블록 글쓰기와 초안 저장은 별도 기능이다. 콘텐츠 submodule에 직접 게시하지 않는다.
+이번에 추가한 본문 전용 Markdown 입력, 전체 문서·수정본 내보내기와 동반 첨부·백업 변경은 롤백한다.
+`npm run import:md`는 기존 JSON 경로용 도구다. submodule 전환 뒤에는 쓰기를 중단한다.
+`--content-root`, `--expected-revision`, `--dry-run`을 사용하는 정식 Markdown 게시 절차는 현재 지원하지 않는다.
+새 작성·게시 계약은 별도 요청에서 다시 검토한다. 공통 파서의 전송 타입이 현재 편집기 지원을 뜻하지 않는다.
 
 ## 공개 경계
 
 공개 Git 저장소에서는 frontmatter도 읽을 수 있다. 화면에서 숨긴 필드는 비공개 데이터가 아니다.
 개인 메모와 로컬 LLM wiki는 앱과 콘텐츠 저장소 밖에 둔다.
 게시 데이터는 허용 필드만 선택한다. 원시 YAML·AI 필드·확장 메타데이터를 공개 화면과 다운로드에 포함하지 않는다.
-공개 다운로드는 본문만 제공한다. 편집기 내보내기는 전체 문서 또는 수정본이며 용도가 다르다.
+공개 다운로드는 게시 본문만 제공한다. 기존 편집기의 내보내기는 정식 원본 전체의 백업이나 게시 파일로 취급하지 않는다.
 
 ## 로컬 LLM wiki
 
