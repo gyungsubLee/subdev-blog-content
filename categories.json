@@ -1,0 +1,411 @@
+[
+  {
+    "id": "group:cs",
+    "name": "CS",
+    "parent_id": null,
+    "order": 0,
+    "sources": []
+  },
+  {
+    "id": "source:수학",
+    "name": "수학",
+    "parent_id": "group:cs",
+    "order": 0,
+    "sources": [
+      "수학"
+    ]
+  },
+  {
+    "id": "source:구조적인 문제 해결을 위한 컴퓨터공학",
+    "name": "구조적인 문제 해결을 위한 컴퓨터공학",
+    "parent_id": "group:cs",
+    "order": 1,
+    "sources": [
+      "구조적인 문제 해결을 위한 컴퓨터공학"
+    ]
+  },
+  {
+    "id": "source:논리적 문제 해결을 위한 컴퓨터과학",
+    "name": "논리적 문제 해결을 위한 컴퓨터과학",
+    "parent_id": "group:cs",
+    "order": 2,
+    "sources": [
+      "논리적 문제 해결을 위한 컴퓨터과학"
+    ]
+  },
+  {
+    "id": "source:네트워크(입문)",
+    "name": "네트워크(입문)",
+    "parent_id": "group:cs",
+    "order": 3,
+    "sources": [
+      "네트워크(입문)"
+    ]
+  },
+  {
+    "id": "source:디자인패턴",
+    "name": "디자인패턴",
+    "parent_id": "group:cs",
+    "order": 4,
+    "sources": [
+      "디자인패턴"
+    ]
+  },
+  {
+    "id": "source:알고리즘",
+    "name": "알고리즘",
+    "parent_id": "group:cs",
+    "order": 5,
+    "sources": [
+      "알고리즘"
+    ]
+  },
+  {
+    "id": "source:자료구조",
+    "name": "자료구조",
+    "parent_id": "group:cs",
+    "order": 6,
+    "sources": [
+      "자료구조"
+    ]
+  },
+  {
+    "id": "source:기술 면접 준비",
+    "name": "기술 면접 준비",
+    "parent_id": "group:cs",
+    "order": 7,
+    "sources": [
+      "기술 면접 준비"
+    ]
+  },
+  {
+    "id": "group:backend",
+    "name": "백엔드",
+    "parent_id": null,
+    "order": 1,
+    "sources": []
+  },
+  {
+    "id": "source:Spring ( Java )",
+    "name": "Spring ( Java )",
+    "parent_id": "group:backend",
+    "order": 0,
+    "sources": [
+      "Spring ( Java )"
+    ]
+  },
+  {
+    "id": "source:Nest.js",
+    "name": "Nest.js",
+    "parent_id": "group:backend",
+    "order": 1,
+    "sources": [
+      "Nest.js"
+    ]
+  },
+  {
+    "id": "source:Golang",
+    "name": "Golang",
+    "parent_id": "group:backend",
+    "order": 2,
+    "sources": [
+      "Golang"
+    ]
+  },
+  {
+    "id": "source:Python",
+    "name": "Python",
+    "parent_id": "group:backend",
+    "order": 3,
+    "sources": [
+      "Python"
+    ]
+  },
+  {
+    "id": "source:DBMS",
+    "name": "DBMS",
+    "parent_id": "group:backend",
+    "order": 4,
+    "sources": [
+      "DBMS"
+    ]
+  },
+  {
+    "id": "source:Redis",
+    "name": "Redis",
+    "parent_id": "group:backend",
+    "order": 5,
+    "sources": [
+      "Redis"
+    ]
+  },
+  {
+    "id": "source:ElasticSearch",
+    "name": "ElasticSearch",
+    "parent_id": "group:backend",
+    "order": 6,
+    "sources": [
+      "ElasticSearch"
+    ]
+  },
+  {
+    "id": "source:테스트코드",
+    "name": "테스트코드",
+    "parent_id": "group:backend",
+    "order": 7,
+    "sources": [
+      "테스트코드"
+    ]
+  },
+  {
+    "id": "source:대규모 시스템 설계",
+    "name": "대규모 시스템 설계",
+    "parent_id": "group:backend",
+    "order": 8,
+    "sources": [
+      "대규모 시스템 설계"
+    ]
+  },
+  {
+    "id": "group:frontend",
+    "name": "프론트엔드",
+    "parent_id": null,
+    "order": 2,
+    "sources": []
+  },
+  {
+    "id": "source:리액트",
+    "name": "리액트",
+    "parent_id": "group:frontend",
+    "order": 0,
+    "sources": [
+      "리액트"
+    ]
+  },
+  {
+    "id": "source:Next.js",
+    "name": "Next.js",
+    "parent_id": "group:frontend",
+    "order": 1,
+    "sources": [
+      "Next.js"
+    ]
+  },
+  {
+    "id": "source:HTML, CSS",
+    "name": "HTML, CSS",
+    "parent_id": "group:frontend",
+    "order": 2,
+    "sources": [
+      "HTML, CSS"
+    ]
+  },
+  {
+    "id": "source:Javascript",
+    "name": "Javascript",
+    "parent_id": "group:frontend",
+    "order": 3,
+    "sources": [
+      "Javascript"
+    ]
+  },
+  {
+    "id": "source:Typescript",
+    "name": "Typescript",
+    "parent_id": "group:frontend",
+    "order": 4,
+    "sources": [
+      "Typescript"
+    ]
+  },
+  {
+    "id": "group:infra",
+    "name": "인프라",
+    "parent_id": null,
+    "order": 3,
+    "sources": []
+  },
+  {
+    "id": "source:Docker",
+    "name": "Docker",
+    "parent_id": "group:infra",
+    "order": 0,
+    "sources": [
+      "Docker"
+    ]
+  },
+  {
+    "id": "source:Kubernetes",
+    "name": "Kubernetes",
+    "parent_id": "group:infra",
+    "order": 1,
+    "sources": [
+      "Kubernetes"
+    ]
+  },
+  {
+    "id": "source:Nginx",
+    "name": "Nginx",
+    "parent_id": "group:infra",
+    "order": 2,
+    "sources": [
+      "Nginx"
+    ]
+  },
+  {
+    "id": "source:CI/CD",
+    "name": "CI/CD",
+    "parent_id": "group:infra",
+    "order": 3,
+    "sources": [
+      "CI/CD"
+    ]
+  },
+  {
+    "id": "source:베포 ( AWS )",
+    "name": "베포 ( AWS )",
+    "parent_id": "group:infra",
+    "order": 4,
+    "sources": [
+      "베포 ( AWS )"
+    ]
+  },
+  {
+    "id": "source:Git",
+    "name": "Git",
+    "parent_id": "group:infra",
+    "order": 5,
+    "sources": [
+      "Git"
+    ]
+  },
+  {
+    "id": "source:모니터링",
+    "name": "모니터링",
+    "parent_id": "group:infra",
+    "order": 6,
+    "sources": [
+      "모니터링"
+    ]
+  },
+  {
+    "id": "group:ai-data",
+    "name": "AI·데이터",
+    "parent_id": null,
+    "order": 4,
+    "sources": []
+  },
+  {
+    "id": "source:Model",
+    "name": "Model",
+    "parent_id": "group:ai-data",
+    "order": 0,
+    "sources": [
+      "Model"
+    ]
+  },
+  {
+    "id": "source:Agent",
+    "name": "Agent",
+    "parent_id": "group:ai-data",
+    "order": 1,
+    "sources": [
+      "Agent"
+    ]
+  },
+  {
+    "id": "source:강화학습",
+    "name": "강화학습",
+    "parent_id": "group:ai-data",
+    "order": 2,
+    "sources": [
+      "강화학습"
+    ]
+  },
+  {
+    "id": "source:데이터 분석",
+    "name": "데이터 분석",
+    "parent_id": "group:ai-data",
+    "order": 3,
+    "sources": [
+      "데이터 분석"
+    ]
+  },
+  {
+    "id": "source:온톨로지",
+    "name": "온톨로지",
+    "parent_id": "group:ai-data",
+    "order": 4,
+    "sources": [
+      "온톨로지"
+    ]
+  },
+  {
+    "id": "source:클로드코드",
+    "name": "클로드코드",
+    "parent_id": "group:ai-data",
+    "order": 5,
+    "sources": [
+      "클로드코드"
+    ]
+  },
+  {
+    "id": "source:n8n",
+    "name": "n8n",
+    "parent_id": "group:ai-data",
+    "order": 6,
+    "sources": [
+      "n8n"
+    ]
+  },
+  {
+    "id": "group:learning-tools",
+    "name": "학습·도구",
+    "parent_id": null,
+    "order": 5,
+    "sources": []
+  },
+  {
+    "id": "source:내일 배움 캠프 ( 백엔드 코스 7기)",
+    "name": "내일 배움 캠프 ( 백엔드 코스 7기)",
+    "parent_id": "group:learning-tools",
+    "order": 0,
+    "sources": [
+      "내일 배움 캠프 ( 백엔드 코스 7기)"
+    ]
+  },
+  {
+    "id": "source:Tool",
+    "name": "Tool",
+    "parent_id": "group:learning-tools",
+    "order": 1,
+    "sources": [
+      "Tool"
+    ]
+  },
+  {
+    "id": "source:History",
+    "name": "History",
+    "parent_id": "group:learning-tools",
+    "order": 2,
+    "sources": [
+      "History"
+    ]
+  },
+  {
+    "id": "group:unclassified",
+    "name": "미분류",
+    "parent_id": null,
+    "order": 6,
+    "sources": []
+  },
+  {
+    "id": "source:Main",
+    "name": "Main",
+    "parent_id": "group:unclassified",
+    "order": 0,
+    "sources": [
+      "Main"
+    ]
+  }
+]

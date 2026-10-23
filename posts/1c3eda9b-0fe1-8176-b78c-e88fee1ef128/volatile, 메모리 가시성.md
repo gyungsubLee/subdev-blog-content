@@ -1,0 +1,34 @@
+---
+order: 29
+kind: article
+summary: ""
+tags: []
+aliases: []
+related_ids: []
+source_ids: []
+review_status: unreviewed
+id: 1c3eda9b-0fe1-8176-b78c-e88fee1ef128
+title: volatile, 메모리 가시성
+breadcrumbs:
+  - id: 1c3eda9b-0fe1-8053-a02d-d27418c5a3fb
+    title: Main
+  - id: 1c3eda9b-0fe1-81ae-909e-cd1f71740107
+    title: Spring ( Java )
+  - id: 1c3eda9b-0fe1-817b-aba4-e002b0666e72
+    title: "[ 고급 1편 ] 멀티스레드와 동시성"
+  - id: 1c3eda9b-0fe1-8176-b78c-e88fee1ef128
+    title: volatile, 메모리 가시성
+excerpt: ""
+cover: null
+icon: null
+notionProperties:
+  Tags: 5. 메모리 가시성
+schema_version: 1
+parent_id: 1c3eda9b-0fe1-817b-aba4-e002b0666e72
+created: 2025-03-27T07:53:10.944Z
+updated: 2025-03-27T07:53:10.944Z
+legacy_path: Main/Spring ( Java )-cd1f71740107/[ 고급 1편 ] 멀티스레드와 동시성-e002b0666e72/volatile, 메모리 가시성-e88fee1ef128/index.md
+legacy_category: Spring ( Java )
+source_url: https://beautiful-college-c84.notion.site/1c3eda9b0fe18176b78ce88fee1ef128
+---
+
