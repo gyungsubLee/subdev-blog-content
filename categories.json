@@ -4,16 +4,9 @@
     "sources": [
       "4af15069-8fa5-491c-b560-4deaeace4b4b"
     ],
-    "name": "CMS 검증 20261024",
+    "name": "CMS 검증 20261024 수정",
     "parent_id": null,
     "order": 0
-  },
-  {
-    "id": "group:cs",
-    "name": "CS",
-    "parent_id": null,
-    "order": 1,
-    "sources": []
   },
   {
     "id": "source:수학",
@@ -79,6 +72,13 @@
     ]
   },
   {
+    "id": "group:cs",
+    "name": "CS",
+    "parent_id": null,
+    "order": 1,
+    "sources": []
+  },
+  {
     "id": "source:구조적인 문제 해결을 위한 컴퓨터공학",
     "name": "구조적인 문제 해결을 위한 컴퓨터공학",
     "parent_id": "group:cs",
@@ -86,13 +86,6 @@
     "sources": [
       "구조적인 문제 해결을 위한 컴퓨터공학"
     ]
-  },
-  {
-    "id": "group:backend",
-    "name": "백엔드",
-    "parent_id": null,
-    "order": 2,
-    "sources": []
   },
   {
     "id": "source:Nest.js",
@@ -140,6 +133,13 @@
     ]
   },
   {
+    "id": "group:backend",
+    "name": "백엔드",
+    "parent_id": null,
+    "order": 2,
+    "sources": []
+  },
+  {
     "id": "source:논리적 문제 해결을 위한 컴퓨터과학",
     "name": "논리적 문제 해결을 위한 컴퓨터과학",
     "parent_id": "group:cs",
@@ -156,13 +156,6 @@
     "sources": [
       "Golang"
     ]
-  },
-  {
-    "id": "group:frontend",
-    "name": "프론트엔드",
-    "parent_id": null,
-    "order": 3,
-    "sources": []
   },
   {
     "id": "source:HTML, CSS",
@@ -201,6 +194,13 @@
     ]
   },
   {
+    "id": "group:frontend",
+    "name": "프론트엔드",
+    "parent_id": null,
+    "order": 3,
+    "sources": []
+  },
+  {
     "id": "source:네트워크(입문)",
     "name": "네트워크(입문)",
     "parent_id": "group:cs",
@@ -228,13 +228,6 @@
     ]
   },
   {
-    "id": "group:infra",
-    "name": "인프라",
-    "parent_id": null,
-    "order": 4,
-    "sources": []
-  },
-  {
     "id": "source:CI/CD",
     "name": "CI/CD",
     "parent_id": "group:infra",
@@ -251,6 +244,13 @@
     "sources": [
       "데이터 분석"
     ]
+  },
+  {
+    "id": "group:infra",
+    "name": "인프라",
+    "parent_id": null,
+    "order": 4,
+    "sources": []
   },
   {
     "id": "source:디자인패턴",
@@ -289,13 +289,6 @@
     ]
   },
   {
-    "id": "group:ai-data",
-    "name": "AI·데이터",
-    "parent_id": null,
-    "order": 5,
-    "sources": []
-  },
-  {
     "id": "source:온톨로지",
     "name": "온톨로지",
     "parent_id": "group:ai-data",
@@ -303,6 +296,13 @@
     "sources": [
       "온톨로지"
     ]
+  },
+  {
+    "id": "group:ai-data",
+    "name": "AI·데이터",
+    "parent_id": null,
+    "order": 5,
+    "sources": []
   },
   {
     "id": "source:알고리즘",
