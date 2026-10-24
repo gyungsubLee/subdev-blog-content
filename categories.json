@@ -407,5 +407,14 @@
     "sources": [
       "대규모 시스템 설계"
     ]
+  },
+  {
+    "id": "3b1331e1-aa6a-4aae-adfb-bfc59172ff35",
+    "sources": [
+      "3b1331e1-aa6a-4aae-adfb-bfc59172ff35"
+    ],
+    "name": "테스트용 카테고리 추가",
+    "parent_id": "group:cs",
+    "order": 8
   }
 ]
