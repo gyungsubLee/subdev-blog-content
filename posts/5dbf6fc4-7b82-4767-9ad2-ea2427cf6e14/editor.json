@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "documentId": "5dbf6fc4-7b82-4767-9ad2-ea2427cf6e14",
+  "markdownHash": "18a42750ecb51d7d5918bd5077fd2ca41eedb3d1feb262330efbc8fb7a80d705",
+  "blocks": [
+    {
+      "id": "4b87199c-65cb-496c-ae6b-7f2b51c9f1e7",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "증분 공개 데이터 생성의 실제 GitHub 게시·수정·삭제를 검증하는 임시 글입니다. 이 글만 변경하고 검사 후 삭제합니다.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    }
+  ]
+}
