@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "documentId": "31ae9f5b-c1dc-4f99-8638-4f61babb8252",
+  "markdownHash": "0580e08e96101702580b7da97a085e3909a83b698d5cd8db2855bfc3ec726d92",
+  "blocks": [
+    {
+      "id": "0f461d67-6b03-4cfb-8d34-5fa22cb185d4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "단계별 실측을 위한 임시 글입니다. 실제 GitHub에서 제목만 세 번 수정한 뒤 이 글만 삭제합니다.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    }
+  ]
+}
