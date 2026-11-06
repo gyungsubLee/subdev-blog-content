@@ -66,7 +66,7 @@
     "id": "group:cs",
     "name": "CS",
     "parent_id": null,
-    "order": 1,
+    "order": 0,
     "sources": []
   },
   {
@@ -127,7 +127,7 @@
     "id": "group:backend",
     "name": "백엔드",
     "parent_id": null,
-    "order": 2,
+    "order": 1,
     "sources": []
   },
   {
@@ -188,7 +188,7 @@
     "id": "group:frontend",
     "name": "프론트엔드",
     "parent_id": null,
-    "order": 3,
+    "order": 2,
     "sources": []
   },
   {
@@ -240,7 +240,7 @@
     "id": "group:infra",
     "name": "인프라",
     "parent_id": null,
-    "order": 4,
+    "order": 3,
     "sources": []
   },
   {
@@ -292,7 +292,7 @@
     "id": "group:ai-data",
     "name": "AI·데이터",
     "parent_id": null,
-    "order": 5,
+    "order": 4,
     "sources": []
   },
   {
@@ -335,7 +335,7 @@
     "id": "group:learning-tools",
     "name": "학습·도구",
     "parent_id": null,
-    "order": 6,
+    "order": 5,
     "sources": []
   },
   {
@@ -378,7 +378,7 @@
     "id": "group:unclassified",
     "name": "미분류",
     "parent_id": null,
-    "order": 7,
+    "order": 6,
     "sources": []
   },
   {
