@@ -63,15 +63,6 @@
     ]
   },
   {
-    "id": "21922bad-aeec-438e-be2a-038212bed07c",
-    "sources": [
-      "21922bad-aeec-438e-be2a-038212bed07c"
-    ],
-    "name": "Audit-20261107-live-v3",
-    "parent_id": null,
-    "order": 0
-  },
-  {
     "id": "group:cs",
     "name": "CS",
     "parent_id": null,
